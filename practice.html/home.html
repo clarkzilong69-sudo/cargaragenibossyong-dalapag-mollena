@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 45px 20px;
+            background: linear-gradient(135deg, #222, #444);
+            color: white;
+            border-radius: 15px;
+            animation: zoomIn 1s ease;
+        }
+
+        .car {
+            font-size: 70px;
+            animation: drive 3s infinite;
+        }
+
+        h1 {
+            color: #ff3333;
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 25px;
+            background: #ff3333;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.08);
+            background: #cc0000;
+        }
+
+        @keyframes drive {
+            0% {
+                transform: translateX(-80px);
+            }
+
+            50% {
+                transform: translateX(80px);
+            }
+
+            100% {
+                transform: translateX(-80px);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="car"></div>
+
+        <h1>CAR GARAGE NI BOSSYONG</h1>
+
+        <p>
+            Welcome to Car Garage ni Bossyong!
+        </p>
+
+        <p>
+            We provide reliable and affordable car repair
+            and maintenance services for your vehicle.
+        </p>
+
+        <a href="product.html" class="button">
+        Find Your Dream Car
+        </a>
+
+    </div>
+
+</body>
+</html>

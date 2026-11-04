@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff3333;
+            margin-bottom: 30px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service {
+            width: 300px;
+            min-height: 360px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            animation: appear 0.8s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .service img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .service h2 {
+            color: #ff3333;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .service p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        button {
+            border: none;
+            padding: 10px 18px;
+            background: #ff3333;
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #198754;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .service {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .service img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Our Car Collection</h1>
+
+    <div class="services">
+
+        <!-- PORSCHE 911 TURBO S -->
+        <div class="service">
+
+            <div class="price">
+            ₱18,500,000
+            </div>
+
+            <img src="https://cdn.motor1.com/images/mgl/VzBONl/s1/2026-porsche-911-turbo-s-hybrid.jpg"
+                 alt="2026 Porsche 911 Turbo S">
+
+            <h2>Porsche 911 Turbo S</h2>
+
+            <p>
+                A powerful and luxurious sports car with
+                impressive performance and modern design.
+            </p>
+
+            <button onclick="bookService('Porsche 911 Turbo S')">
+                Book Service
+            </button>
+
+        </div>
+
+
+        <!-- PORSCHE 911 CARRERA -->
+        <div class="service">
+
+            <div class="price">
+             ₱12,500,000
+            </div>
+
+            <img src="https://cdn.motor1.com/images/mgl/y24Qjq/s1/2025-porsche-carrera-t-coupe.jpg"
+                 alt="2025 Porsche 911 Carrera">
+
+            <h2>Porsche 911 Carrera</h2>
+
+            <p>
+                A stylish sports car that combines
+                performance, comfort, and everyday driving.
+            </p>
+
+            <button onclick="bookService('Porsche 911 Carrera')">
+                Book Service
+            </button>
+
+        </div>
+
+
+        <!-- FERRARI SF90 -->
+        <div class="service">
+
+            <div class="price">
+                ₱25,000,000
+            </div>
+
+            <img src="https://www.carscoops.com/wp-content/uploads/2024/02/Ferrari-SF90-Stradale-9a.jpg"
+                 alt="Ferrari SF90 Stradale">
+
+            <h2>Ferrari SF90 Stradale</h2>
+
+            <p>
+                A high-performance Ferrari known for its
+                aggressive styling and incredible speed.
+            </p>
+
+            <button onclick="bookService('Ferrari SF90 Stradale')">
+                Book Service
+            </button>
+
+        </div>
+
+
+        <!-- FERRARI SF90 XX -->
+        <div class="service">
+
+            <div class="price">
+                ₱30,000,000
+            </div>
+
+            <img src="https://cdn.motor1.com/images/mgl/koBZ74/s1/ferrari-sf90-xx-stradale-bianco-artico.jpg"
+                 alt="Ferrari SF90 XX Stradale">
+
+            <h2>Ferrari SF90 XX Stradale</h2>
+
+            <p>
+                An extreme performance car designed
+                for speed, style, and driving excitement.
+            </p>
+
+            <button onclick="bookService('Ferrari SF90 XX Stradale')">
+                Book Service
+            </button>
+
+        </div>
+
+
+        <!-- LAMBORGHINI -->
+        <div class="service">
+
+            <div class="price">
+                ₱22,000,000
+            </div>
+
+            <img src="https://4kwallpapers.com/images/wallpapers/lamborghini-5191x2920-11264.jpeg"
+                 alt="Lamborghini">
+
+            <h2>Lamborghini</h2>
+
+            <p>
+                A stunning Italian supercar featuring
+                bold styling and powerful performance.
+            </p>
+
+            <button onclick="bookService('Lamborghini')">
+                Book Service
+            </button>
+
+        </div>
+
+
+        <!-- LAMBORGHINI AVENTADOR -->
+        <div class="service">
+
+            <div class="price">
+                ₱28,000,000
+            </div>
+
+            <img src="https://www.carscoops.com/wp-content/uploads/2023/03/Lamborghini-Aventador-SV-Strasse-8a-1.jpg"
+                 alt="Lamborghini Aventador SV">
+
+            <h2>Lamborghini Aventador SV</h2>
+
+            <p>
+                A powerful Lamborghini with an aggressive
+                design and high-performance character.
+            </p>
+
+            <button onclick="bookService('Lamborghini Aventador SV')">
+                Book Service
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="message"></div>
+
+    <script>
+        function bookService(service) {
+
+            document.getElementById("message").innerHTML =
+                "✅ " + service +
+                " selected! Please go to Contact to schedule your service.";
+        }
+    </script>
+
+</body>
+</html>

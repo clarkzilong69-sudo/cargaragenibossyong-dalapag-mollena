@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border-top: 8px solid #ff3333;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff3333;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            color: #444;
+            font-size: 16px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            background: #ff3333;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #cc0000;
+            transform: scale(1.02);
+        }
+
+        #message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #198754;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-box">
+
+        <h1> Contact Us</h1>
+
+        <div class="contact-info">
+            <p>Need a car repair or service?</p>
+            <p>Fill out the form below and we'll get in touch with you.</p>
+
+            <p><strong> Location:</strong> Manolo Fortich, Bukidnon</p>
+            <p><strong> Phone:</strong> 09XX-XXX-XXXX</p>
+            <p><strong> Email:</strong> cargarag[email protected]</p>
+        </div>
+
+        <form onsubmit="submitForm(event)">
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required>
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required>
+
+            <label for="service">Select Service</label>
+
+            <select id="service" required>
+                <option value="">-- Select a Service --</option>
+                <option value="Oil Change">Oil Change</option>
+                <option value="Brake Service">Brake Service</option>
+                <option value="Engine Repair">Engine Repair</option>
+                <option value="Car Wash">Car Wash</option>
+            </select>
+
+            <label for="messageText">Message</label>
+
+            <textarea
+                id="messageText"
+                placeholder="Enter your message">
+            </textarea>
+
+            <button type="submit">
+                Submit Request
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+        function submitForm(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let service = document.getElementById("service").value;
+
+            document.getElementById("message").innerHTML =
+                "✅ Thank you, " + name +
+                "! Your request for " + service +
+                " has been received.";
+        }
+    </script>
+
+</body>
+</html>
